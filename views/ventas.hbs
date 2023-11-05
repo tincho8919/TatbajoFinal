@@ -1,0 +1,71 @@
+<div class="container mt-5 text-center">
+    <h1>Carrito de compras</h1>
+</div>
+<div class="container">
+
+    {{#each dato}}
+
+    <div class="card" style="width: 20rem;">
+        <img src={{ imagen }} class="card-img-top" alt="imegen del Producto">
+        <div class="card-body">
+            <h5 class="card-title">{{ nombre }}</h5>
+            <p class="card-text">{{ precio }}</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="/delete/<%= customers[i].id %>" class="btn btn-danger">
+                Delete
+            </a>
+            
+            <button class="btn btn-danger btn-borrar-producto" data-producto-id="{{_id}}">Borrar</button>
+        </div>
+    </div>
+
+    {{/each}}
+
+
+</div>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+    }
+</style>
+<script>
+    const botonesBorrar = document.querySelectorAll('.btn-borrar-producto');
+
+botonesBorrar.forEach((boton) => {
+    boton.addEventListener('click', function () {
+        const productoId = boton.getAttribute('data-producto-id');
+
+        // Realizar una solicitud a tu servidor para eliminar el producto con el productoId
+        fetch(`/eliminar-producto/${productoId}`, {
+            method: 'DELETE',
+        })
+            .then((response) => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    throw new Error(`Error deleting product: ${response.status}`);
+                }
+            })
+            .then((data) => {
+                if (data.message === 'Producto eliminado con éxito') {
+                    // Actualiza la vista o recarga la página para mostrar los productos actualizados
+                    location.reload();
+                } else {
+                    console.error('Error al eliminar el producto');
+                }
+            })
+            .catch((error) => {
+                console.error('Error al eliminar el producto', error);
+            });
+    });
+});
+</script>

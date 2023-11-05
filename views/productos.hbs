@@ -1,0 +1,27 @@
+    <div class="container text-center mt-5">
+        <h1>Formulario de Productos</h1>
+    </div>
+
+    <div class="container">
+        <form action="/user/productos" method="post">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen</label>
+                <input type="text" class="form-control" id="imagen" name="imagen" required>
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precio" name="precio" required>
+            </div>
+            <div class="m-5 text-center">
+                <button type="submit" class="btn btn-success w-50">Enviar Producto</button>
+            </div>
+            <div class="m-5 text-center">
+                <button type="reset" class="btn btn-danger w-50">Borrar Datos</button>
+            </div>
+        </form>
+    </div>
+

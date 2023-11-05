@@ -1,0 +1,24 @@
+<!-- compra.hbs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <ul>
+        {{#each carrito}}
+            <li>
+                <img src="{{this.imagen}}" alt="{{this.nombre}}">
+                <h2>{{this.nombre}}</h2>
+                <p>Precio: ${{this.precio}}</p>
+                <p>Detalles: {{this.detalles}}</p>
+            </li>
+        {{/each}}
+    </ul>
+    <script src="/js/productos.js"></script>
+</body>
+</html>

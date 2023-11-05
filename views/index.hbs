@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/inicio.css">
+</head>
+<body class="bodytec">
+    <h1 class="tec">BIENVENIDO A TEC-PC</h1>
+    <section>
+            <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="/sliderimg/1.gif" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="/sliderimg/2.png" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="/sliderimg/3.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="/sliderimg/4.jpeg" alt="Slide 4">
+            </div>
+        </div>
+        <button class="prev-btn" onclick="changeSlide(-1)">Prev</button>
+        <button class="next-btn" onclick="changeSlide(1)">Next</button>
+    </section>
+    <section>
+        <h2 class="off">OFFERTAS IMPERDIBLES !!!</h2>
+         <div class="productos-container">
+    <div class="producto">
+        <img src="/offimg/1.jpeg" alt="Producto 1">
+        <h2>PC Y-70</h2>
+        <p>Precio: $54000.99</p>
+        <button class="mostrar-detalles">Mostrar detalles</button>
+        <div class="detalles-hidden">
+            <p>Detalles: Eficiente totalmente.</p>
+        </div>
+        <button data-id="{{producto.id}}" class="agregar-al-carrito"
+            data-nombre="Producto 1"
+            data-precio="19.99"
+            data-detalles="Detalles del producto 1"
+            data-imagen="/imagenes/img01.webp">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="/offimg/2.jpeg"
+            alt="Producto 1">
+        <h2>PC V-88</h2>
+        <p>Precio: $54000.99</p>
+        <button  class="mostrar-detalles">Mostrar detalles</button>
+        <div class="detalles-hidden">
+            <p>Detalles: Buen producto.</p>
+        </div>
+        <button data-id="{{producto.id}}" class="agregar-al-carrito"
+            data-nombre="Producto 1"
+            data-precio="19.99"
+            data-detalles="Detalles del producto 1"
+            data-imagen="/imagenes/img02.jpeg">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="/offimg/3.png"
+            alt="Imagen">
+        <h2>PC J-10</h2>
+        <p>Precio: $27000.99</p>
+        <button class="mostrar-detalles">Mostrar detalles</button>
+        <div class="detalles-hidden">
+            <p>Detalles: Bien diseñada.</p>
+        </div>
+        <button data-id="{{producto.id}}" class="agregar-al-carrito"
+            data-nombre="Producto 1"
+            data-precio="19.99"
+            data-detalles="Detalles del producto 1"
+            data-imagen="/imagenes/im03.jpeg">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="/offimg/4.jpeg"
+            alt="Producto 1">
+        <h2>PC W-33</h2>
+        <p>Precio: $24000.99</p>
+        <button class="mostrar-detalles">Mostrar detalles</button>
+        <div class="detalles-hidden">
+            <p>Detalles: Fantastica para el hogar.</p>
+        </div>
+        <button data-id="{{producto.id}}" class="agregar-al-carrito"
+            data-nombre="Producto 1"
+            data-precio="19.99"
+            data-detalles="Detalles del producto 1"
+            data-imagen="/imagenes/img04.jpeg">Agregar al carrito</button>
+    </div>
+    </section>
+    
+    <script src="/js/inicio.js"></script>
+</body>
+</html>
+   

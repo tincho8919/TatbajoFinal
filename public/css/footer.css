@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+.footer {
+    background-color: darkgray;
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+}
+
+.copy {
+    position: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.us {
+    position: none;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.bottonfooter {
+    position: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+
+}
+
+.whatsapp {
+    color: green;
+
+}
+
+.gmail {
+    color: red;
+}
+
+.facebook {
+    color: blue;
+}
+
+.instagram {
+    color: #29149b;
+}
+
+.linkedin {
+    color: darkblue;
+}
+
+.main-content {
+    margin-bottom: 100px;
+}
+
+
+@media screen and (max-height: 600px) {
+    .main-content {
+        margin-bottom: 150px;
+    }
+}

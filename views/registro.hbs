@@ -1,0 +1,37 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/registro.css">
+   </head>
+   <body>
+    <div class="container mt-5 text-center">
+        <h1>Registro con HBS</h1>
+    </div>
+
+    <section class="alto">
+    <main>
+        <div class="login-container">
+            <h2>Registro</h2>
+            <form action="/user/create" method="post" id="registroForm" >
+                <label class="ancho" for="nombre">NOMBRE:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label class="ancho" for="email">EMAIL:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label class="ancho" for="password">PASSWORD:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Enviar</button>
+
+            
+        </div>
+    </main>
+</section>
+   </body>
+   </html>
+   
+
